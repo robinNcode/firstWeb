@@ -3,7 +3,11 @@ from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse("This is homepage")
+    context = {
+        'name' : 'MD Shahin Mia Robin'
+    }
+    return render(request, 'index.html', context)
+    # return HttpResponse("This is homepage")
 
 
 def aboutUs(request):
